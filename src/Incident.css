@@ -1,0 +1,47 @@
+/* Base */
+
+.incident {
+  align-items: center;
+  color: var(--text-color-dark);
+  display: flex;
+  flex-basis: 100%;
+  font-size: 4em;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+.incident.long {
+  font-size: 3em;
+}
+
+.incident .timestamp {
+  margin-left: .2em;
+}
+
+
+/* Colors */
+
+.incident.slate {
+  background-color: var(--color-slate);
+}
+
+.incident.pale-pink {
+  background-color: var(--color-pale-pink);
+}
+
+.incident.salmon {
+  background-color: var(--color-salmon);
+  color: var(--text-color-light);
+}
+
+.incident.yellow {
+  background-color: var(--color-yellow);
+}
+
+.incident.aqua {
+  background-color: var(--color-aqua);
+  color: var(--text-color-light);
+}

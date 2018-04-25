@@ -1,0 +1,42 @@
+{
+  "incidents": [
+      {
+          "description": "hit his head on the office light",
+          "occurrences": [
+              "2018/04/18",
+              "2018/02/09"
+          ]
+      },
+      {
+          "description": "spilled a drink on his desk",
+          "occurrences": [
+              "2018/02/16",
+              "2018/02/14"
+          ]
+      },
+      {
+          "description": "spilled a drink on himself",
+          "occurrences": [
+              "2018/02/15"
+          ]
+      },
+      {
+          "description": "dropped something that interrupted someone talking",
+          "occurrences": [
+              "2018/04/21"
+          ]
+      },
+      {
+          "description": "dumped the pet food all over the food",
+          "occurrences": [
+              "2018/04/15"
+          ]
+      },
+      {
+          "description": "ran back to the car because he forgot his phone on the seat",
+          "occurrences": [
+              "2018/04/20"
+          ]
+      }
+  ]
+}

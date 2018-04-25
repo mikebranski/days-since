@@ -8,14 +8,15 @@
           ]
       },
       {
-          "description": "spilled a drink on his desk",
+          "description": "spilled a drink (probably coffee)",
           "occurrences": [
+              "2018/04/24",
               "2018/02/16",
               "2018/02/14"
           ]
       },
       {
-          "description": "spilled a drink on himself",
+          "description": "spilled a drink (probably coffee) on himself",
           "occurrences": [
               "2018/02/15"
           ]
@@ -30,6 +31,12 @@
           "description": "dumped the pet food all over the floor",
           "occurrences": [
               "2018/04/15"
+          ]
+      },
+      {
+          "description": "left a trail of the pet's water throughout the house",
+          "occurrences": [
+              "2018/04/23"
           ]
       },
       {

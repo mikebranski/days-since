@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import daysAgo from '../../date-formatter.js';
+import daysAgo from '../../lib/date-formatter.js';
 
 import './View.css';
 

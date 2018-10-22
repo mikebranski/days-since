@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Incident from './Incident';
+import IncidentView from './View';
 
-class Incidents extends Component {
+class IncidentCollection extends Component {
 
   colors = [
     'aqua',
@@ -44,7 +44,7 @@ class Incidents extends Component {
   renderIncidents() {
     return this.state.incidents.map((incident, index) => {
       return (
-        <Incident
+        <IncidentView
           key={index}
           color={this.getRandomAvailableColor()}
           date={incident.lastIncidentDate}
@@ -77,4 +77,4 @@ class Incidents extends Component {
 
 }
 
-export default Incidents;
+export default IncidentCollection;

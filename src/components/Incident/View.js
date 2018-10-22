@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import daysAgo from './date-formatter.js';
+import daysAgo from '../../lib/date-formatter.js';
 
-import './Incident.css';
+import './View.css';
 
-class Incident extends Component {
+class IncidentView extends Component {
 
   generateSlug(label) {
     return label.replace(/\W/g, '-');
@@ -30,4 +30,4 @@ class Incident extends Component {
 
 }
 
-export default Incident;
+export default IncidentView;

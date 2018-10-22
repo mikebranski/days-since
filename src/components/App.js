@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
 import './App.css';
-import Incidents from './Incidents';
+import IncidentCollection from './Incident/Collection';
 
 class App extends Component {
   render() {
@@ -14,7 +15,7 @@ class App extends Component {
           <h1><a href="/">Days Since Mike...</a></h1>
         </header>
 
-        <Incidents />
+        <IncidentCollection />
       </div>
     );
   }

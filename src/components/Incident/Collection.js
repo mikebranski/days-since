@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import IncidentView from './View';
+import randomizeArray from '../../lib/randomize-array.js';
 
 class IncidentCollection extends Component {
 
@@ -37,7 +39,7 @@ class IncidentCollection extends Component {
     } );
 
     this.setState({
-      incidents
+      incidents: randomizeArray(incidents)
     });
   }
 

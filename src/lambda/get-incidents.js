@@ -7,12 +7,7 @@ const { AIRTABLE_API_KEY } = process.env;
 const base =
   new Airtable({ apiKey: AIRTABLE_API_KEY }).base('appXG4ZW7CCWHM535');
 
-const getIncidentsSuccess = (error, records, callback) => {
-  if (error) {
-    callback(error);
-    return;
-  }
-
+const getIncidentsSuccess = (records) => {
   const incidents = [];
 
   records.forEach(record => {
@@ -26,16 +21,24 @@ const getIncidentsSuccess = (error, records, callback) => {
 };
 
 exports.handler = async (event, context, callback) => {
-  base('Incident Types')
-    .select({
-      fields: ['Name', 'Last Occurrence'],
-    })
-    .all((error, records) => {
-      const incidents = getIncidentsSuccess(error, records, callback);
+  try {
+    return base('Incident Types')
+      .select({
+        fields: ['Name', 'Last Occurrence'],
+      })
+      .all()
+      .then(records => {
+        const incidents = getIncidentsSuccess(records);
 
-      callback(null, {
-        statusCode: 200,
-        body: JSON.stringify(incidents)
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify(incidents)
+        });
+      })
+      .catch(error => {
+        callback(error);
       });
-    });
+  } catch (err) {
+    callback(err);
+  };
 };

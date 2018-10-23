@@ -51,6 +51,20 @@ class IncidentCollection extends Component {
     this.setState({
       incidents: randomizeArray(incidents)
     });
+
+    if (window.location.hash) {
+      this.jumpToActiveIncident();
+    }
+  }
+
+  jumpToActiveIncident() {
+    const target = document.querySelector(window.location.hash);
+
+    if (!target) {
+      return;
+    }
+
+    target.scrollIntoView();
   }
 
   renderIncidents() {

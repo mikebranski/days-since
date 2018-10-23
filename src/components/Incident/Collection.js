@@ -27,15 +27,25 @@ class IncidentCollection extends Component {
   }
 
   async loadIncidents() {
-    let request = await fetch('/db.json');
+    let request = await fetch('/.netlify/functions/get-incidents');
+
+    if (!request.ok) {
+      this.setState({
+        incidents: [{
+          'description': 'had a problem preventing his app from loading',
+          'lastIncidentDate': new Date()
+        }]
+      });
+
+      return;
+    }
+
     let json = await request.json();
-    let incidents = json.incidents.map( incident => {
-        // Sort the dates newest-first.
-        incident.occurrences.sort( (a, b) => a < b );
-        return {
-            description: incident.description,
-            lastIncidentDate: incident.occurrences[0]
-        };
+    let incidents = json.map( incident => {
+      return {
+          description: incident.name,
+          lastIncidentDate: incident.lastOccurrence
+      };
     } );
 
     this.setState({
